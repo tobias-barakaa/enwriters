@@ -37,5 +37,5 @@ flask run
 
 Contributers:
 - [Micah Ondiwa](https://github.com/micahondiwa)
-- [tobias baraka](https://github.com/tobias-barakaa)
+- [tobias-baraka](https://github.com/tobias-barakaa)
 
