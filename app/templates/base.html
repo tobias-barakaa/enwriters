@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - enwriters</title>
+      {% else %}
+      <title>Welcome to Enwriters</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Enwriters: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
