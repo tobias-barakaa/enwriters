@@ -34,6 +34,7 @@ pip install -r requirements.txt
 ```
 flask run
 ```
+### Files and Folders
 
 Contributers:
 - [Micah Ondiwa](https://github.com/micahondiwa)
