@@ -1,5 +1,5 @@
 # Enwriters
-- This is alx specialization portofolio project.
+- This is alx specialization portfolio project.
 ### How to use this repo/get started;
 
 1. Clone the repo.
