@@ -1,0 +1,10 @@
+flask
+python-dotenv
+flask-wtf
+flask-sqlalchemy
+flask-migrate
+flask-login
+email-validator
+flask_restx
+flask_jwt_extended
+extensions
