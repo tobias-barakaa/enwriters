@@ -1,6 +1,6 @@
 """Contains all authentication logics"""
 
-from flask_restx import Api, Namespace, fields
+from flask_restx import Api, Namespace, fields, Resource
 from models import User 
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import JWTManager, create_access_token, create_refresh_token, jwt_required

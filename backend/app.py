@@ -1,160 +1,30 @@
-from flask import Flask, request, jsonify
-from flask_restx import Api, Resource, fields
-from config import Config
+from flask import Flask
+from flask_restx import Api
 from models import Article, User
 from exts import db
 from flask_migrate import Migrate
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_jwt_extended import JWTManager, create_access_token, create_refresh_token, jwt_required
-
-app = Flask(__name__)
-app.config.from_object(Config)
-db.init_app(app)
-migrate=Migrate(app,db)
-JWTManager(app)
-
-api=Api(app,doc='/docs')
-
-# model serializer for exposing the model to json.
-article_model=api.model(
-    "Article",
-    {
-        "id": fields.Integer(),
-        "title":fields.String(),
-        "description":fields.String(),
-        "keywords":fields.String(),
-        "words":fields.Integer(),
-        "duration":fields.Integer(),
-        "cost":fields.Integer(),
-        "author":fields.String()
-    }
-)
-
-signup_model=api.model(
-    'SignUp',
-    {   "id":fields.Integer(),
-        "username":fields.String(),
-        "email":fields.String(),
-        "password":fields.String()
-
-    }
-)
-
-login_model=api.model(
-    "Login",
-    {
-        'username':fields.String(),
-        'pasword':fields.String()
-    }
-)
-@api.route('/hello')
-class HelloResource(Resource):
-    def get(self):
-        return {"Hello": "Hello, Welcome to enwriters"}
-        
+from flask_jwt_extended import JWTManager
+from articles import article_ns
+from auth import auth_ns
 
 
-@api.route('/signup')
-class SignUp(Resource):
-    @api.marshal_with(signup_model)
-    @api.expect(signup_model)
-    @jwt_required()
-    def post(self):
-        data=request.get_json()
+def creat_app(config):
+    app = Flask(__name__)
+    app.config.from_object(config)
 
-        username=data.get('username')
-        db_user=User.query.filter(username=username).first()
+    db.init_app(app)
 
-        if db_user is not None:
-            return jsonify({"message":f"User with username {username} already exist."})
+    migrate=Migrate(app,db)
+    JWTManager(app)
+    
+    api=Api(app,doc='/docs')
+    api.add_namespace(article_ns)
+    api.add_namespace(auth_ns)
 
-        new_user=User(
-            username=data.get('username'),
-            email=data.get('email'),
-            password=generate_password_hash(data.get('password'))
-        )
+    @app.shell_context_processor
+    def make_shell_context():
+        return {'db': db, 
+        'Article': Article,
+        'User': User}
 
-
-
-        new_user.save()
-        return jsonify({"message":"User created successfuly"})
-
-
-
-@api.route('/login')
-class Login(Resource):
-    @api.expect(login_model)
-    def post(self):
-        data=request.get_json()
-
-        username=data.get('username')
-        password=data.get('password')
-
-        db_user=User.query.filter_by(username=username).first()
-
-        if db_user and check_password_hash(db_user.password,password):
-            access_token=get_access_token(identity=db_user.username)
-            refresh_token=create_refresh_token(identity=db_user.username)
-
-            return jsonify(
-                {"access_token": access_token, "refresh_token": refresh_token}
-            )
-
-@api.route('/articles')
-class ArticlesResource(Resource):
-    @api.marshal_list_with(article_model)
-    def get(self):
-        """Get all Articles from the db"""
-        articles=Article.querry.all()
-        return articles
-
-    @api.marshal_with(article_model)
-    @api.expect(article_model)
-    def post(self):
-        """create a new article"""
-        data=request.get_json()
-
-        new_article=Article(
-            title=data.get('title')
-        )
-        new_article.save()
-        return new_article, 201
-
-@api.route('/article/<int:id>')
-class ArticleResource(Resource):
-    @api.marshal_with(article_model)
-    def get(self, id):
-        """Get article by id"""
-        article=article.query.get_or_404(id)
-
-        return article
-
-    @api.marshal_with(article_model)
-    @jwt_required()
-    def put(self,id):
-        """update a article"""
-        article_to_update=Article.query.get_or_404(id)
-
-        data=request.get_json()
-        article_to_update.update(data.get(id))
-
-        return article_to_update
-
-    @api.marshal_with(article_model)
-    @jwt_required()
-    def delete(self, id):
-        """deleting by id"""
-        article_to_delete=Article.query.get_or_404(id)
-        article_to_delete.delete()
-        return article_to_delete
-
-
-
-       
-
-@app.shell_context_processor
-def make_shell_context():
-    return {'db': db, 'Article': Article}
-
-if __name__ == '__main__':
-    app.run()
+    return app
