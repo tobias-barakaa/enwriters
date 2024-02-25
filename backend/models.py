@@ -1,3 +1,4 @@
+"""Models module: Contains all models in the app"""
 from exts import db 
 
 from typing import Optional
