@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 6. You can now run the app:
 ```
-flask run
+python .\run.py
 ```
 ### Files and Folders
 
