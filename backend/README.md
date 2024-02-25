@@ -1,6 +1,6 @@
 # Enwriters
 - This is alx specialization portfolio project.
-### How to use this repo/get started;
+### How to use this repo - getting started;
 
 1. Clone the repo.
 2. Cd to the root directory.
