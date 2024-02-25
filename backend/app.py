@@ -1,9 +1,10 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_restx import Api, Resource, fields
 from config import Config
-from models import Article
+from models import Article, User
 from exts import db
 from flask_migrate import Migrate
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -27,6 +28,17 @@ article_model=api.model(
     }
 )
 
+signup_model=api.model(
+    'SignUp',
+    {   "id":fields.Integer(),
+        "username":fields.String(),
+        "email":fields.String(),
+        "password":fields.String()
+
+    }
+)
+
+
 @api.route('/hello')
 class HelloResource(Resource):
     def get(self):
@@ -36,14 +48,32 @@ class HelloResource(Resource):
 
 @api.route('/signup')
 class SignUp(Resource):
+    # @api.marshal_with(signup_model)
+    @api.expect(signup_model)
     def post(self):
-        pass
+        data=request.get_json()
+
+        username=data.get('username')
+        db_user=User.query.filter(username=username).first()
+
+        if db_user is not None:
+            return jsonify({"message":f"User with username {username} already exist."})
+
+        new_user=User(
+            username=data.get('username'),
+            email=data.get('email'),
+            password=generate_password_hash(data.get('password'))
+        )
+
+
+
+        new_user.save()
+        return jsonify({"message":"User created successfuly"})
 
 @api.route('/login')
 class Login(Resource):
-    def 
-    pass
-
+    def post(self):
+        pass
 
 
 
@@ -56,6 +86,7 @@ class ArticlesResource(Resource):
         return articles
 
     @api.marshal_with(article_model)
+    @api.expect(article_model)
     def post(self):
         """create a new article"""
         data=request.get_json()
