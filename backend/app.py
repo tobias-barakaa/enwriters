@@ -33,6 +33,20 @@ class HelloResource(Resource):
         return {"Hello": "Hello, Welcome to enwriters"}
         
 
+
+@api.route('/signup')
+class SignUp(Resource):
+    def post(self):
+        pass
+
+@api.route('/login')
+class Login(Resource):
+    def 
+    pass
+
+
+
+
 @api.route('/articles')
 class ArticlesResource(Resource):
     @api.marshal_list_with(article_model)
