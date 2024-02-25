@@ -16,12 +16,12 @@ class APITestCase(unittest.TestCase):
             db.init_app(self.app)
             db.create_all()
 
-    def test_hello_world():
+    def test_hello():
         hello_response=self.client.get('/article/hello')
 
         json=hello_response.json
         
-        self.assertEqual(json,{"message": "Hello world"})
+        self.assertEqual(json,{"message": "Hello World, welcome to Enwriters!"})
 
     def test_signup(self):
         signup_response=self.client.post('/auth/signup',
@@ -33,7 +33,8 @@ class APITestCase(unittest.TestCase):
         status_code=signup.response.status_code
         self.assertEqual(status_code, 201)
 
-    def test_login()
+    def test_login():
+        pass
 
     def tearDown(self):
         with self.app.app_context():
