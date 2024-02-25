@@ -1,3 +1,5 @@
+"""app moduele: The main app"""
+
 from flask import Flask
 from flask_restx import Api
 from models import Article, User
