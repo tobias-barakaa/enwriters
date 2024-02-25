@@ -4,7 +4,7 @@ from flask_restx import Api, Namespace, fields, Resource
 from models import User 
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import JWTManager, create_access_token, create_refresh_token, jwt_required
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
 
 auth_ns=Namespace('auth', description="A namespace for our authentication")
 
@@ -47,7 +47,7 @@ class SignUp(Resource):
         )
 
         new_user.save()
-        return jsonify({"message":"User created successfuly"})
+        return make_response(jsonify({"message":"User created successfuly"}), 201)
 
 @auth_ns.route('/login')
 class Login(Resource):
