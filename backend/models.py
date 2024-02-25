@@ -5,7 +5,7 @@ import sqlalchemy as sa
 import sqlalchemy.orm as so
 
 
-
+# Articles model
 class Article(db.Model):
     id=db.Column(db.Integer(), primary_key=True)
     title=db.Column(db.String(), nullable=False)
@@ -33,4 +33,14 @@ class Article(db.Model):
         self.description=description
 
         db.session.commit()
+
+# User Model
     
+class User(db.Model):
+    id=db.Column(db.Integer(), primary_key=True)
+    username=db.Column(db.String(25), primary_key=True, unique=True)
+    email=db.Column(db.String(80), primary_key=True, unique=True)
+    password=db.Column(db.Text(), primary_key=True)
+
+    def __repr__(self):
+        return f"<User {self.username}>"
