@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restx import Api, Resource, fields
 from config import Config
 from models import User
@@ -16,7 +16,7 @@ user_model=api.model(
     {
         "id": fields.Integer(),
         "Username":fields.String(),
-        "email":fields.email,
+        "email":fields.String(),
         "password":fields.String()
     }
 )
@@ -29,31 +29,52 @@ class HelloResource(Resource):
 
 @api.route('/users')
 class UsersResource(Resource):
+    @api.marshal_list_with(user_model)
     def get(self):
         """Get all users ffrom the db"""
         users=Users.querry.all()
         return users
 
+    @api.marshal_with(user_model)
     def post(self):
         """create a new user"""
-        pass
+        data=request.get_json()
+
+        new_user=User(
+            username=data.get('username')
+        )
+        new_user.save()
+        return new_user, 201
 
 @api.route('/user/<int:id>')
 class UserResource(Resource):
+    @api.marshal_with(user_model)
     def get(self, id):
         """Get user by id"""
-        pass
+        user=user.query.get_or_404(id)
 
+        return user
+
+    @api.marshal_with(user_model)
     def put(self,id):
         """update a user"""
-        pass
+        user_to_update=User.query.get_or_404(id)
 
+        data=request.get_json()
+        user_to_update.update(data.get("username"))
+
+        return user_to_update
+
+    @api.marshal_with(user_model)
     def delete(self, id):
         """deleting by id"""
-        pass
+        user_to_delete=User.query.get_or_404(id)
+        user_to_delete.delete()
+        return user_to_delete
 
 
 
+       
 
 @app.shell_context_processor
 def make_shell_context():

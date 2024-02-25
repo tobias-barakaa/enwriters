@@ -25,4 +25,6 @@ class User(db.Model):
     def update(self, username, email):
         self.title=title
         self.email=email
+
+         db.session.commit()
     
