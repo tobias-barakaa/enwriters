@@ -5,14 +5,20 @@ import sqlalchemy as sa
 import sqlalchemy.orm as so
 
 
-class User(db.Model):
+
+class Article(db.Model):
     id=db.Column(db.Integer(), primary_key=True)
-    username=db.Column(db.String(),nullable=False)
-    email=db.Column(db.String(), nullable=False)
-    password=db.Column(db.String(), nullable=False)
+    title=db.Column(db.String(), nullable=False)
+    description=db.Column(db.String(),nullable=False)
+    keywords=db.Column(db.String(), nullable=False)
+    words=db.Column(db.String(), nullable=False)
+    duration=db.Column(db.Integer(), nullable=False)
+    cost=db.Column(db.Integer(), nullable=False)
+    author=db.Column(db.String(), nullable=False)
+
 
     def __repr__(self):
-        return '<User {}>'.format(self.username)
+        return '<Article {}>'.format(self.title)
     
     def save(self):
         db.session.add(self)
@@ -22,9 +28,9 @@ class User(db.Model):
         db.session.delete(self)
         db.session.commit()
     
-    def update(self, username, email):
+    def update(self, title, description):
         self.title=title
-        self.email=email
+        self.description=description
 
-         db.session.commit()
+        db.session.commit()
     

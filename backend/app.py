@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_restx import Api, Resource, fields
 from config import Config
-from models import User
+from models import Article
 from exts import db
 
 
@@ -11,13 +11,17 @@ db.init_app(app)
 api=Api(app,doc='/docs')
 
 # model serializer for exposing the model to json.
-user_model=api.model(
-    "User",
+article_model=api.model(
+    "Article",
     {
         "id": fields.Integer(),
-        "Username":fields.String(),
-        "email":fields.String(),
-        "password":fields.String()
+        "title":fields.String(),
+        "description":fields.String(),
+        "keywords":fields.String(),
+        "words":fields.Integer(),
+        "duration":fields.Integer(),
+        "cost":fields.Integer(),
+        "author":fields.String()
     }
 )
 
@@ -27,50 +31,50 @@ class HelloResource(Resource):
         return {"Hello": "Hello, Welcome to enwriters"}
         
 
-@api.route('/users')
-class UsersResource(Resource):
-    @api.marshal_list_with(user_model)
+@api.route('/articles')
+class ArticlesResource(Resource):
+    @api.marshal_list_with(article_model)
     def get(self):
-        """Get all users ffrom the db"""
-        users=Users.querry.all()
-        return users
+        """Get all Articles from the db"""
+        articles=Article.querry.all()
+        return articles
 
-    @api.marshal_with(user_model)
+    @api.marshal_with(article_model)
     def post(self):
-        """create a new user"""
+        """create a new article"""
         data=request.get_json()
 
-        new_user=User(
-            username=data.get('username')
+        new_article=Article(
+            title=data.get('title')
         )
-        new_user.save()
-        return new_user, 201
+        new_article.save()
+        return new_article, 201
 
-@api.route('/user/<int:id>')
-class UserResource(Resource):
-    @api.marshal_with(user_model)
+@api.route('/article/<int:id>')
+class ArticleResource(Resource):
+    @api.marshal_with(article_model)
     def get(self, id):
-        """Get user by id"""
-        user=user.query.get_or_404(id)
+        """Get article by id"""
+        article=article.query.get_or_404(id)
 
-        return user
+        return article
 
-    @api.marshal_with(user_model)
+    @api.marshal_with(article_model)
     def put(self,id):
-        """update a user"""
-        user_to_update=User.query.get_or_404(id)
+        """update a article"""
+        article_to_update=Article.query.get_or_404(id)
 
         data=request.get_json()
-        user_to_update.update(data.get("username"))
+        article_to_update.update(data.get(id))
 
-        return user_to_update
+        return article_to_update
 
-    @api.marshal_with(user_model)
+    @api.marshal_with(article_model)
     def delete(self, id):
         """deleting by id"""
-        user_to_delete=User.query.get_or_404(id)
-        user_to_delete.delete()
-        return user_to_delete
+        article_to_delete=Article.query.get_or_404(id)
+        article_to_delete.delete()
+        return article_to_delete
 
 
 
@@ -78,7 +82,7 @@ class UserResource(Resource):
 
 @app.shell_context_processor
 def make_shell_context():
-    return {'db': db, 'User': User}
+    return {'db': db, 'Article': Article}
 
 if __name__ == '__main__':
     app.run()
