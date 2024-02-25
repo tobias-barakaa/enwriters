@@ -10,7 +10,7 @@ from articles import article_ns
 from auth import auth_ns
 
 
-def creat_app(config):
+def create_app(config):
     app = Flask(__name__)
     app.config.from_object(config)
 

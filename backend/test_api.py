@@ -1,22 +1,22 @@
-"""test_api module: All the unittest for the api endpoints"""
-
 import unittest
-from app import creat_app
+from app import create_app
 from config import TestConfig
 from exts import db
 
+"""test_api module: All the unittest for the api endpoints"""
 
 class APITestCase(unittest.TestCase):
     def setUp(self):
-        self.app=creat_app(TestConfig)
+        self.app=create_app(TestConfig)
 
-        self.client=self.app.test_cleint(self)
+        self.client=self.app.test_client(self)
 
         with self.app.app_context():
             db.init_app(self.app)
+
             db.create_all()
 
-    def test_hello():
+    def test_hello(self):
         hello_response=self.client.get('/article/hello')
 
         json=hello_response.json
@@ -33,7 +33,7 @@ class APITestCase(unittest.TestCase):
         status_code=signup.response.status_code
         self.assertEqual(status_code, 201)
 
-    def test_login():
+    def test_login(self):
         pass
 
     def tearDown(self):

@@ -1,10 +1,6 @@
 """Models module: Contains all models in the app"""
 from exts import db 
 
-from typing import Optional
-import sqlalchemy as sa
-import sqlalchemy.orm as so
-
 
 # Articles model
 class Article(db.Model):
