@@ -1,6 +1,7 @@
 import React from 'react';
 import './HomeLayout.css'
 import { FaSearch, FaFacebook } from 'react-icons/fa'
+import enwriters from '../assets/enwriters.png';
 
 const HomeLayout = () => {
   return (
@@ -17,7 +18,9 @@ const HomeLayout = () => {
    
     <nav className="navbar navbar-expand-lg navbar-light bg-blue-tint shadow" style={{ height: '100px' }}>
   <div className="container-fluid">
-    <a className="navbar-brand text-black fs-4" href="/enwriters">Enwriters</a>
+    <a className="navbar-brand text-black fs-4" href="/enwriters">
+      <img src={enwriters} alt="enwriters" width="200" height="200" className="" />
+    </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -58,17 +61,8 @@ const HomeLayout = () => {
 </div>
 </div>
 
-<h1>View Samples</h1>
-<div className='view-samples'>
-  <div className="sample-type">
-    <h2>Ai generated</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div className="sample-type">
-    <h2>Manual Written</h2>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-</div>
+
+
 
 
 

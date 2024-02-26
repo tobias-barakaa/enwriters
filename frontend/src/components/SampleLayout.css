@@ -1,0 +1,35 @@
+.view-samples {
+    width: 100%;
+    height: 240px; /* Set the height to 240px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .sample-type {
+    width: 48%;
+    font-family: 'Courier New', Courier, monospace; /* Use a font resembling ancient handwriting */
+    border-right: 1px solid orange; /* Add vertical line */
+    padding-right: 10px; /* Add padding to separate text from line */
+  }
+  
+  .sample-type:last-child {
+    border-right: none; /* Remove border from last sample-type */
+  }
+  
+  .sample-type h2 {
+    font-size: 1.5rem;
+    color: orange;
+  }
+  
+  .sample-type hr {
+    border: none;
+    border-top: 1px solid orange;
+  }
+  
+  .sample-type p {
+    font-size: 1rem;
+    color: black; /* Text color */
+  }
