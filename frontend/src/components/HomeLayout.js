@@ -49,12 +49,27 @@ const HomeLayout = () => {
   <div className="header-text">
     <h1>Your Company Name</h1>
     <p>Providing top-notch digital marketing and article writing services</p>
+    <div className="button-group">
+      <button className="btn btn-blue">Get Started</button>
+      <button className="btn btn-dark-blue">Learn More</button>
+      <button className="btn btn-light-blue">View Samples</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<h1>View Samples</h1>
+<div className='view-samples'>
+  <div className="sample-type">
+    <h2>Ai generated</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div className="sample-type">
+    <h2>Manual Written</h2>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
 </div>
 
-
-
-</div>
 
 
     </div>

@@ -39,11 +39,10 @@
   }
   
 
-
   .header-container {
     background-color: #f0f0f0; /* Almost shade white-grey */
     width: 100%; /* Cover full width */
-    height: 500px; /* Height of 500px */
+    min-height: 350px; /* Minimum height of 500px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,36 +63,65 @@
     color: #555; /* Text color */
   }
   
+  .button-group {
+    margin-top: 20px; /* Adjust spacing between text and buttons */
+  }
+  
+  .btn {
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px; /* Adjust margin between buttons */
+  }
+  
+  .btn:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+  }
+  
+  .btn-blue {
+    background-color: #007bff; /* Blue */
+    color: #fff;
+  }
+  
+  .btn-dark-blue {
+    background-color: #0056b3; /* Dark blue */
+    color: #fff;
+  }
+  
+  .btn-light-blue {
+    background-color: #6cace4; /* Light blue */
+    color: #fff;
+  }
 
 
 
 
 
-main {
-    display: flex; /* Allow flexbox for main content */
-}
 
-.content-container {
+  .view-samples {
+    width: 100%;
     display: flex;
-    width: 100%; 
-}
-
-.item-names, .form-section {
-    width: 50%;
-}
-
-.item-names ul {
-    list-style-type: none; /* Remove bullet points if desired */
-    padding: 0;
-}
-
-.form-section {
-    display: flex;
-    flex-direction: column; /* Stack image and form vertically */
-    align-items: center; /* Center content horizontally*/
-}
-
-.form-section img { 
-    max-width: 100%;  /* Make image responsive */
-    margin-bottom: 15px; /* Add spacing below image */
-}
+    justify-content: center;
+    gap: 40px; /* Spacing between items */
+  }
+  
+  .sample-type {
+    width: 35%;
+    background-color: #4e7ac7; /* Slightly shaded blue */
+    color: white; /* Text color */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+  }
+  
+  .sample-type h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .sample-type p {
+    font-size: 1rem;
+  }
+  
+  
