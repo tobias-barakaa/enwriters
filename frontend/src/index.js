@@ -1,13 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useEffect, useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 const App = () => {
-    const [message, setMessage] = useState('')
+
+    useEffect(
+        () => {
+            fetch('/article/hello')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    setMessage(data.message);
+                })
+                .catch(err => console.log(err));
+        }, []
+    );
+
+    const [message, setMessage] = useState('');
+
     return (
         <div className='app'>
             {message}
         </div>
-    )
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));
+    );
+};
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
