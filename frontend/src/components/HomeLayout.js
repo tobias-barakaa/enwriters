@@ -68,19 +68,7 @@ const HomeLayout = () => {
 
 
 <div className="two-ceps">
-  <div className="signup-container">
-
-
-   
-
-
-
-
-
-
-
-  </div>
-  <div className='explore-sample'>
+ 
   <div className="hire-expert">
      <div className="hire-expert">
     
@@ -119,6 +107,7 @@ const HomeLayout = () => {
 </div> */}
 
 
+<div className='lets'>
 <div className="card-container">
   <div className="card">
     <h2>Ai generated</h2>
@@ -146,27 +135,11 @@ const HomeLayout = () => {
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<AddArticle />
 
 </div>
+
+
 
 
 

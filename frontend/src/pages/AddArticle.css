@@ -1,14 +1,15 @@
 
-  width
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 40px;
+        margin-top: 50px;
     }
   
   .form-group {
     display: flex;
-    width: 400px;
+    width: 700px;
 
     align-items: center;
     margin-bottom: 1rem;
@@ -32,7 +33,7 @@
 
 
   .button {
-    width: 400px;
+    width: 700px;
     padding: 10px 20px; 
     font-size: 16px;
     background-color: #007bff; 
