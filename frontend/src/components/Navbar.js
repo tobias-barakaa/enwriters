@@ -1,5 +1,4 @@
-from React import 'react';
-
+import React from 'react';
 
 const NavBar = () => {
     return (
