@@ -6,16 +6,17 @@
     justify-content: flex-end; /* Align items to the right */
     padding: 0 20px; /* Adjust padding as needed */
   }
-  
+
+  width
   .nav-item {
     display: flex;
     align-items: center;
-    margin-left: 10px; /* Adjust spacing between items */
+    margin-left: 10px; 
   }
   
   .nav-icon {
-    background-color: #004a8a; /* Different shade of blue for the icon box */
-    padding: 8px; /* Adjust padding as needed */
+    background-color: #004a8a;
+    padding: 8px;
     border-radius: 4px; /* Rounded corners */
     margin-right: 5px; /* Adjust spacing between icon box and text */
   }
@@ -49,19 +50,7 @@
     text-align: center;
   }
   
-  .header-text {
-    width: 50%; /* 50% width for text */
-  }
   
-  .header-text h1 {
-    font-size: 3rem; /* Adjust font size as needed */
-    color: #333; /* Text color */
-  }
-  
-  .header-text p {
-    font-size: 1.2rem; /* Adjust font size as needed */
-    color: #555; /* Text color */
-  }
   
   .button-group {
     margin-top: 20px; /* Adjust spacing between text and buttons */
@@ -98,7 +87,65 @@
 
 
 
+  .two-ceps {
+    display: flex;
+  }
 
+
+
+  
+  
+  .signup-container {
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 5px;
+  }
+  
+  .hire-expert {
+    background-color: #7EC8F7;
+    padding: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif; /* Choose your desired font family */
+  }
+  
+  .hire-expert h2 {
+    font-size: 61rem; /* Increase font size */
+    font-weight: bold; /* Make text bolder */
+    text-align: center; /* Center align the text */
+    display: inline-block; /* Display as inline block */
+    white-space: nowrap; /* Prevent line breaks */
+    margin-right: -200px; /* Add some spacing between "Hire an expert" and the description */
+  }
+    
+  
+  .hire-expert p {
+    margin-top: 10px;
+  }
+  
+  .explore-button {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-family: Arial, sans-serif; /* Choose your desired font family */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .explore-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .explore-button i {
+    margin-left: 5px;
+  }
+  
+
+
+.explore-sample {
+  display: flex;
+}
 
   
   

@@ -2,6 +2,10 @@ import React from 'react';
 import './HomeLayout.css'
 import { FaSearch, FaFacebook } from 'react-icons/fa'
 import enwriters from '../assets/enwriters.png';
+import FormInput from './FormInput';
+import AddArticle from '../pages/AddArticle';
+import ex from '../assets/3.png';
+
 
 const HomeLayout = () => {
   return (
@@ -63,6 +67,110 @@ const HomeLayout = () => {
 
 
 
+<div className="two-ceps">
+  <div className="signup-container">
+
+
+   
+
+
+
+
+
+
+
+  </div>
+  <div className='explore-sample'>
+  <div className="hire-expert">
+     <div className="hire-expert">
+    
+    <h2>Hire an expert</h2>
+    <p>Find certified professional freelancers and agencies to<br /> help you build your perfect publication.</p>
+    <button className="explore-button">
+      Explore <i className="fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+
+    <img src={ex} alt="image"  />
+  </div>
+
+
+
+
+
+  {/* <div className='view-samples'>
+  <div className="sample-type">
+    <h2>Ai generated</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  </div>
+  <div className="sample-type">
+    <h2>Manual Written</h2>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+  </div>
+</div> */}
+
+
+<div className="card-container">
+  <div className="card">
+    <h2>Ai generated</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <br />
+      <br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      
+    </p>
+    <button className="read-more-button">Read More</button>
+    {/* Image goes here */}
+  </div>
+  <div className="card">
+    <h2>Manually Written</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <br />
+      <br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      
+    </p>
+    <button className="read-more-button">Read More</button>
+    {/* Image goes here */}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
 
 
 
