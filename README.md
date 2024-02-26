@@ -41,8 +41,13 @@ python .\run.py
    ```
 8. start the frontend:
 ```
+cd frontend
+```
+
+```
 npm start
 ```
+
 9. View the landing page:
 ```
 http://localhost:3000
