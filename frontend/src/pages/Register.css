@@ -85,6 +85,15 @@
     height: 60px;    
 
   }
+
+  .input-field {
+    border: 1px solid #ccc; /* Default border */
+  }
+  
+  /* Add the red border for empty fields on submit */
+  .input-field:not([value]) {
+    border: 2px solid red;
+  }
   
   button[type="submit"] {
     background-color: #4CAF50; /* Green background for submit button */
