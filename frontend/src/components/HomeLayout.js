@@ -13,15 +13,7 @@ import SampleLayout from './SampleLayout';
 const HomeLayout = () => {
   return (
     <div>
-<div className='short-nav'>
-      <div className='nav-item'>
-        <span className='nav-icon search-icon'><FaSearch /></span>
-        <span className='nav-text'>Search item</span>
-      </div>
-      <div className='nav-item'>
-        <span className='nav-icon'><FaFacebook /></span>
-      </div>
-    </div>
+
    
     <nav className="navbar navbar-expand-lg navbar-light bg-blue-tint shadow" style={{ height: '100px' }}>
   <div className="container-fluid">
@@ -70,31 +62,8 @@ const HomeLayout = () => {
 
 
 
-{/* <div className='yeah'>
-<div className="flow">
-<img className='backend' src={backend} alt="image"  />
 
-<div class="right">
-        <p class="text">Manual written</p>
-    </div>
-
-</div>
-
-
-<div className="flow">
-
-<div class="left">
-        <p class="text">Manual written</p>
-    </div>
-    <img className='backend' src={backend} alt="image"  />
-
-</div>
-
-</div> */}
 <div class="sample-articles">Sample Articles</div>
-
-
-
 <div class="samplee">
     <div class="left">
         <img src={soul} alt='backend' />
