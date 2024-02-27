@@ -33,7 +33,7 @@ class ArticlesResource(Resource):
     def get(self):
         """Gets all articles from the database"""
 
-        articles=Article.querry.all()
+        articles=Article.query.all()
         return articles
 
     @article_ns.marshal_with(article_model)
