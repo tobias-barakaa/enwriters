@@ -142,42 +142,12 @@ const HomeLayout = () => {
   </div>
 
   
-<div className='lets'>
-<div className="card-container">
-  <div className="card">
-    <h2>Ai generated</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      <br />
-      <br />
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      
-    </p>
-    <button className="read-more-button">Read More</button>
-  </div>
-  <div className="card">
-    <h2>Manually Written</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      <br />
-      <br />
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      
-    </p>
-    <button className="read-more-button">Read More</button>
-  </div>
-</div>
-
-<AddArticle />
-
-</div>
-
 </div>
 
 
 
 
-<h2>Contact Us</h2>
+
 
 
 

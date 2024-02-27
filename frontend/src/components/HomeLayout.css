@@ -93,67 +93,6 @@
 
 
 
-
-  .two-ceps {
-    display: flex;
-  }
-
-
-
-  
-  
-  .signup-container {
-    background-color: white;
-    margin-top: 30px;
-    border-radius: 5px;
-  }
-  
-  .hire-expert {
-    background-color: #7EC8F7;
-    padding: 20px;
-    color: #fff;
-    font-family: Arial, sans-serif; 
-  }
-  
-  .hire-expert h2 {
-    font-size: 61rem; 
-    font-weight: bold; 
-    text-align: center; 
-    display: inline-block;
-    white-space: nowrap;
-    margin-right: -200px; 
-  }
-    
-  
-  .hire-expert p {
-    margin-top: 10px;
-  }
-  
-  .explore-button {
-    border: 2px solid #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
-    font-family: Arial, sans-serif; 
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .explore-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .explore-button i {
-    margin-left: 5px;
-  }
-  
-
-
-.explore-sample {
-  display: flex;
-}
-
   
   /* .backend {
     width: 20%;
@@ -223,3 +162,8 @@ img {
     max-height: 50%;
     display: block;
 }
+
+
+
+
+
