@@ -3,7 +3,7 @@ import './HomeLayout.css'
 import { FaSearch, FaFacebook } from 'react-icons/fa'
 import enwriters from '../assets/enwriters.png';
 import AddArticle from '../pages/AddArticle';
-import ex from '../assets/3.png';
+import bg from '../assets/bg.png';
 import backend from '../assets/backend.jpg';
 import soul from '../assets/soul.png';
 import manual from '../assets/manual.jpg';
@@ -125,7 +125,7 @@ const HomeLayout = () => {
 
 
 
-<div className="two-ceps">
+
  
   <div className="hire-expert">
      <div className="hire-expert">
@@ -138,11 +138,10 @@ const HomeLayout = () => {
   </div>
 
 
-    <img src={ex} alt="image"  />
+    <img  className="bg" src={bg} alt="image"  />
   </div>
 
   
-</div>
 
 
 
