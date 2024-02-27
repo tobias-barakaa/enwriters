@@ -12,7 +12,6 @@ function App() {
     <div>
       <Register />
 <HomeLayout />
-    <SampleLayout />
     </div>
     
   );

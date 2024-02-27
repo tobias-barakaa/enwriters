@@ -2,6 +2,8 @@ import React from 'react';
 import './SampleLayout.css'
 import soul from '../assets/soul.png';
 import manual from '../assets/manual.jpg';
+import bg from '../assets/bg.png';
+
 
 const SampleLayout = () => {
   return (
@@ -30,6 +32,19 @@ const SampleLayout = () => {
         </div>
     </div>
 </div>
+<div className="hire-expert">
+     <div className="hire-expert">
+    
+    <h2>Hire an expert</h2>
+    <p>Find certified professional freelancers and agencies to<br /> help you build your perfect publication.</p>
+    <button className="explore-button">
+      Explore <i className="fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+
+    <img  className="bg" src={bg} alt="Background"  />
+  </div>
      
     </div>
   )
