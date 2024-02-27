@@ -81,9 +81,9 @@
   input[type="password"] {
     width: 100%; /* Makes the input fields full width */
     padding: 10px; /* Adds padding to the input fields */
-    border: 1px solid #ccc; /* Light gray border */
     border-radius: 3px; /* Rounded corners */
-    height: 60px;
+    height: 60px;    
+
   }
   
   button[type="submit"] {
@@ -99,3 +99,18 @@
     background-color: #46a049; /* Slightly darker green on hover */
   }
   
+
+  input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+}
+
+/* Disable browser autofill suggestions */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important; /* Adjust as needed */
+    -webkit-text-fill-color: inherit;
+}
