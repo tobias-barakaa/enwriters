@@ -2,9 +2,12 @@ import React from 'react';
 import './HomeLayout.css'
 import { FaSearch, FaFacebook } from 'react-icons/fa'
 import enwriters from '../assets/enwriters.png';
-import FormInput from './FormInput';
 import AddArticle from '../pages/AddArticle';
 import ex from '../assets/3.png';
+import backend from '../assets/backend.jpg';
+import soul from '../assets/soul.png';
+import manual from '../assets/manual.jpg';
+import SampleLayout from './SampleLayout';
 
 
 const HomeLayout = () => {
@@ -67,6 +70,61 @@ const HomeLayout = () => {
 
 
 
+{/* <div className='yeah'>
+<div className="flow">
+<img className='backend' src={backend} alt="image"  />
+
+<div class="right">
+        <p class="text">Manual written</p>
+    </div>
+
+</div>
+
+
+<div className="flow">
+
+<div class="left">
+        <p class="text">Manual written</p>
+    </div>
+    <img className='backend' src={backend} alt="image"  />
+
+</div>
+
+</div> */}
+<div class="sample-articles">Sample Articles</div>
+
+
+
+<div class="samplee">
+    <div class="left">
+        <img src={soul} alt='backend' />
+        <div>
+            <p class="neon-text">AI-generated</p>
+            <div class="separator"></div>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+    <div class="right">
+    <img src={manual} alt="Right Image" />
+
+        <div>
+            <p class="neon-text">Manual written</p>
+            <div class="separator"></div>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 <div className="two-ceps">
  
   <div className="hire-expert">
@@ -83,30 +141,7 @@ const HomeLayout = () => {
     <img src={ex} alt="image"  />
   </div>
 
-
-
-
-
-  {/* <div className='view-samples'>
-  <div className="sample-type">
-    <h2>Ai generated</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-  </div>
-  <div className="sample-type">
-    <h2>Manual Written</h2>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-  </div>
-</div> */}
-
-
+  
 <div className='lets'>
 <div className="card-container">
   <div className="card">
@@ -119,7 +154,6 @@ const HomeLayout = () => {
       
     </p>
     <button className="read-more-button">Read More</button>
-    {/* Image goes here */}
   </div>
   <div className="card">
     <h2>Manually Written</h2>
@@ -131,7 +165,6 @@ const HomeLayout = () => {
       
     </p>
     <button className="read-more-button">Read More</button>
-    {/* Image goes here */}
   </div>
 </div>
 
@@ -139,11 +172,13 @@ const HomeLayout = () => {
 
 </div>
 
-
-
-
-
 </div>
+
+
+
+
+<h2>Contact Us</h2>
+
 
 
 

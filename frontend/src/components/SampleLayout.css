@@ -1,4 +1,4 @@
-.card-container {
+/* .card-container {
     display: flex;
     height: 400px;
   }
@@ -38,4 +38,35 @@
     border: 2px solid #007bff;
     color: #007bff;
   }
-  
+   */
+
+
+   /* .samplee {
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.left {
+    border-right: 1px solid #ccc;
+}
+.right {
+    border-left: 1px solid #ccc;
+}
+.text {
+    margin: 0;
+} */
+/* img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+} */
