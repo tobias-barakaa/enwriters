@@ -96,16 +96,21 @@
   }
   
   button[type="submit"] {
-    background-color: #4CAF50; /* Green background for submit button */
+    background-color: #000000;
+    width: 600px;
     color: white; /* White text color */
     padding: 12px 20px; /* Adds padding to the submit button */
-    border: none; /* No border for the submit button */
     border-radius: 3px; /* Rounded corners */
     cursor: pointer; /* Changes cursor to pointer on hover */
+    border-radius: 20px;
+    margin-top: 20px;
+    
   }
   
   button[type="submit"]:hover {
-    background-color: #46a049; /* Slightly darker green on hover */
+    background-color: #0d0e0d;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
   }
   
 
