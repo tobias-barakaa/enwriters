@@ -14,7 +14,7 @@ export const loader = async () => {
 const DashboardLayout = () => {
   return (
     <div>
-      
+      <h1>What's going on</h1>
     </div>
   )
 }

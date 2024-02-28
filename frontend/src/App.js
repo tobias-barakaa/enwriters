@@ -5,13 +5,13 @@ import Register from "./pages/Register";
 import { AddArticle, Admin, AllArticles, DashboardLayout, EditArticle, Error, Login } from "./pages";
 import {action as registerAction } from './pages/Register';
 import { action as loginAction } from './pages/Login';
-import { LayoutDisplay } from "./components";
 import {loader as dashboardLoader} from './pages/DashboardLayout';
 import {loader as adminLoader} from './pages/Admin';
 import {loader as allArticlesLoader} from './pages/AllArticles';
 import {loader as editArticleLoader} from './pages/EditArticle';
 import {action as editArticleAction} from './pages/EditArticle';
 import {action as deleteArticleAction} from './pages/DeleteArticle';
+import LayoutDisplay from "./pages/LayoutDisplay";
 // import AddArticle from './pages/AddArticle';
 const router = createBrowserRouter([
   {
@@ -80,7 +80,6 @@ function App() {
   return (
     <div>
       <RouterProvider router={router} />
-<HomeLayout />
     </div>
     
   );

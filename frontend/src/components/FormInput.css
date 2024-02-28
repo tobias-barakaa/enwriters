@@ -1,4 +1,5 @@
 .containerr {
+  padding-top: 70px;
     display: flex;
     width: 100%; /* Ensures the container takes full width */
   }
@@ -15,7 +16,7 @@
 
   .left-side{
     display: flex;
-    flex-direction: column; /* Stacks elements vertically */
+    flex-direction: column;
     
   }
   .right-sidee {
@@ -29,6 +30,8 @@
   .box {
     margin: 0 auto;
     padding-top: 80px;
+    padding-left: 200px;
+    padding-right: 20px;
     font-weight: 900;
     font-size: 300px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -81,8 +84,8 @@
   input[type="password"] {
     width: 100%; /* Makes the input fields full width */
     padding: 10px; /* Adds padding to the input fields */
-    border-radius: 3px; /* Rounded corners */
-    height: 60px;    
+    border-radius: 8px; /* Rounded corners */
+    height: 50px;    
 
   }
 
