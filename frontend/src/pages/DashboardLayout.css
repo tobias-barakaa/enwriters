@@ -1,0 +1,60 @@
+.contain {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .navigate {
+    width: 100%; /* Change width to 100% */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-top: 30px; /* Add margin-top */
+    position: relative; /* Add position relative */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-in {
+    width: 20%;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .sidebar {
+    width: 17%;
+    height: 60vh;
+    color: #000000;
+    margin-top: 42px;
+    left: 50; /* Align with the left side */
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar-item {
+    padding: 15px 17px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for hover effect */
+  }
+  
+  .sidebar-item:hover {
+    background-color: #f3f3f3; /* Change background color on hover */
+  }
+  
+  .sidebar-item:last-child {
+    border-bottom: none; /* Remove border from last item */
+  }
+  
+
+  .icon {
+    margin-right: 10px; /* Add margin for better spacing */
+    color: #333333; /* Initial blue color */
+    transition: color 0.3s; /* Add transition for hover effect */
+    color: #007bff; /* Change color to blue on hover */
+    font-size: 20px;
+  }
+  
+  .sidebar-item:hover .icon {
+    color: #007bff; /* Change color to blue on hover */
+  }
